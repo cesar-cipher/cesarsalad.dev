@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# cesarsalad.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A portfolio site for me, César Cano!
 
-Currently, two official plugins are available:
+> # Content Planning
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Version 1: Basic MVP
 
-## React Compiler
+- Furnish the page with my info, separated into sections
+  - **About**
+    - Photo of yours truly
+    - Summary of page
+  - **Experience**
+    - Job titles
+    - Companies
+    - Month + year of start -> Month + year of end
+    - Description of the job, my impact, and tech stacks used
+  - **Education**
+    - Degree title
+    - University name
+    - Month + year of graduation
+    - Description of extracurriculars, honor societies, scholarships
+  - **Projects**
+    - Project title
+    - Solo vs collaborative
+    - Month + year of start -> Month + year of end
+    - Description of project purpose, tech stack, any reach analytics
+  - **Hobbies**
+    - Get to know me personally! This is where I list the extra stuff.
+      - **Sewing**
+        - Company name (Nothing Special)
+        - Photos of example work
+        - Description of brand, my efforts, small biz cohort membership
+      - **Piano**
+        - YouTube channel
+        - Links to example pieces I've arranged
+        - Description of what I actually do (learn by ear & arrangements)
+      - **Languages**
+        - List of languages spoken and fluency
+        - Exams I've taken/am planning to take
+        - Why I learned them?
+- Make it at least pleasant to look at
+  - Doesn't have to be groundbreakingly cool or reactive, just functional
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Version 2: Prettified
+- Add a navbar
+  - Quick auto-scroll to the various sections
+- Implement a clear aesthetic direction
+  - Light mode only
+  - Filter/recolor images to use consistent palette/warmth/saturation
+  - Some minimally reactive components: a wiggle here, a float there
+- Design the page with a variety of desktop views in mind
+  - Check typical monitor sizes
+  - The elements should slide/scale/read cleanly between various sizes
 
-## Expanding the ESLint configuration
+## Version 3: Prettified plus
+- Design the page with mobile views in mind
+  - Elements like the navbar should shrink to a hamburger menu
+  - Essential elements remain on screen even when the screen is narrow
+  - Images scale cleanly without overlap or odd stretching
+- Add subtle looping animations to bring life to the page
+  - Small elements "floating" forever
+  - Background that may ripple or slowly change color/brightness
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Version 4: Beautiful!
+- Design a dark mode
+  - Dark mode for desktop view
+  - Dark mode for mobile view
+- Toggle between light and dark modes
+  - Add light vs dark state for each component
+  - Explicit button for modifying component states
+- Reference user time zone for initial state
+  - 6am - 6pm -> Light mode
+  - 6pm - 6am -> Dark mode
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Version 5: Gorgeous!!
+- Add something for wow factor!
+  - TBD
+  - Many portfolios to examine as inspiration, but I gotta add what makes ME special
+  
+<br>
+<br>
+  
+> # Technical planning
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Tech stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Uses React framework
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Coded in TypeScript
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Separation of powers
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+`/public`: All the header and boilerplate items like favicons  
+`/src`: All source code
+  - `/assets`: Static assets like images, fonts, global CSS files  
+  - `/components`: All React components, and organized by nested-ness  
+  - `/data`: JSON/TSX files for static content that I may update frequently, like project descriptions or global variable maps  
+  - `/hooks`: Hooks used globally. ***Page-specific hooks should go in their specific page directory, if it exists...***  
+  - `/utils`: All non-essential helper Typescript files  
