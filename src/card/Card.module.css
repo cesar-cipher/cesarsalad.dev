@@ -1,0 +1,20 @@
+/*
+CardDeck: The main body of the page.
+    Component is CardDeck.tsx
+*/
+.cardDeck {
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;
+    margin: 10px;
+}
+
+/*
+CardSection: Each collection of entries of data, e.g. "Education"
+    Component is CardSection.tsx
+*/
+
+/*
+CardEntry: The individual card(s) inside each CardSection, e.g. "Boston University"
+    Component is CardEntry.tsx
+*/

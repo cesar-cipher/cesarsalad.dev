@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import CardDeck from "./card/CardDeck.tsx";
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        We can only go up from here!
-      </div>
+      <CardDeck>
+        <CardSection>
+
+        </CardSection>
+      </CardDeck>
     </>
   )
 }
