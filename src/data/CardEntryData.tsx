@@ -29,10 +29,10 @@ export const sections: CardSectionProps[] = [
                 `,
             },
             {
-                title: "SWE Intern",
+                title: "SWE Intern at Drift.com",
                 description: `
-                <p>This was an internship where I was thrown to the wolves!</p>
-                <p>But I also partially blame myself for letting it get to that point.</p>
+                <p>This was an internship where I was confused a lot of the time.</p>
+                <p>But I also learned a lot - which is the whole point of an internship!</p>
                 `,
             }
         ]
