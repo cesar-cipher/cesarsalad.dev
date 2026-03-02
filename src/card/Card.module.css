@@ -13,8 +13,14 @@ CardDeck: The main body of the page.
 CardSection: Each collection of entries of data, e.g. "Education"
     Component is CardSection.tsx
 */
+.cardSection {
+    
+}
 
 /*
 CardEntry: The individual card(s) inside each CardSection, e.g. "Boston University"
     Component is CardEntry.tsx
 */
+.cardEntry {
+
+}
