@@ -1,18 +1,21 @@
-import { useState } from 'react'
 import './App.css'
-import CardDeck from "./card/CardDeck.tsx";
+import styles from "./card/Card.module.css";
+import CardSection from "./card/CardSection.tsx";
+import { sections } from "./data/CardEntryData.tsx";
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <CardDeck>
-        <CardSection>
+      {/* NavBar will go here */}
 
-        </CardSection>
-      </CardDeck>
+      <div className={styles.cardDeck}>
+        {/* It's cleaner to put the data in a separate file, 
+            so it can be edited quickly without modifying code. */}
+        {sections.map((section) => (
+          <CardSection key={section.title} {...section} />
+        ))}
+      </div>
     </>
   )
 }

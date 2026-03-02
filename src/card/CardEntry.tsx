@@ -12,7 +12,9 @@ const CardEntry = ({id, title, subtitle, description}: CardEntryProps) => {
         <div className={styles.cardEntry} key={id} id={id}>
             <h3>{title}</h3>
             {subtitle && <h4>{subtitle}</h4>}
-            {description}
+
+            {/* Render the string in CardEntry.description as HTML */}
+            <div dangerouslySetInnerHTML={{ __html: description }}/>
         </div>
     );
 };
