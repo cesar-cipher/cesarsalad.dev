@@ -7,18 +7,20 @@
     padding: 0;
 }
 
-body {
-    background-color: var(--color-page-bg);
+html, body {
     height: 100%;
     width: 100%;
 }
 
+body {
+    color: black;
+}
+
 .App {
     background-color: var(--color-page-bg);
-    height: 100%;
+    min-height: 100%;    /* Page can grow beyond viewport */
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex;  /* Like block, but block puts margin based on the contents; flex is around the drawn block. */
+    flex-direction: column; /* Main axis is Y-axis */
+    /* align-items: stretch; is set by default */
 }

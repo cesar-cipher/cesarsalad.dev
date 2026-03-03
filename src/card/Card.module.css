@@ -5,15 +5,13 @@ CardDeck: The main body of the page.
     Component is CardDeck.tsx
 */
 .cardDeck {
+    max-width: 1200px; /* Common max-width for desktop */
+    min-width: 60px;
     height: auto;
-    max-width: 800px;
-    min-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 2%; /* 2% on top/bottom; centered on left/right */
     background-color: rgba(0, 0, 0, 0.1);
-    margin: 2%;
+    display: flex; /* Just like before: Each content entry will be its own block */
+    flex-direction: column; /* and those blocks will be arranged along the y-axis. */
 }
 
 /*
@@ -23,9 +21,14 @@ CardSection: Each collection of entries of data, e.g. "Education"
 .cardSection {
     height: auto;
     width: 100%;
+    margin: 1% auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
+}
+
+.cardSection .h3 { /* subtitle is optional */
+    display: float;
 }
 
 /*
@@ -34,8 +37,16 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 */
 .cardEntry {
     height: auto;
-    width: fit-content;
+    min-height: 160px;  /* Avoid any crazy-short entries */
+    width: 95%;
+    margin: 1% auto; /* No margin on top/bottom; centered left/right */
+    padding: 3%;
     background-color: var(--pool-sky);
     border: 1px solid var(--black-sand);
     border-radius: 4px;
+    text-align: left;
+}
+
+.cardEntry .cardEntryDesc {
+    margin-top: 2%;
 }

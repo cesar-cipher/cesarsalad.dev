@@ -14,7 +14,7 @@ const CardEntry = ({id, title, subtitle, description}: CardEntryProps) => {
             {subtitle && <h4>{subtitle}</h4>}
 
             {/* Render the string in CardEntry.description as HTML */}
-            <div dangerouslySetInnerHTML={{ __html: description }}/>
+            <div className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: description }}/>
         </div>
     );
 };
