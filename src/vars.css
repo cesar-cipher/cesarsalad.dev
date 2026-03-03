@@ -1,0 +1,48 @@
+:root {
+    /* Color vars for use */
+    --color-page-bg: var(--pool-breeze);
+    --color-card-bg: var(--pool-sky);
+    --color-card-text-body: var(--black-sand);
+    --color-card-text-title: var(--black-slate);
+
+    /* Typeface vars for use */
+    /*
+        --typeface-body:
+        --typeface-strong:
+        --typeface-accent:
+    */
+
+    /* Color library */
+    --circus-white: #f3e5cb;
+    --circus-red: #ff0000;
+    --circus-red-dark: #db0505;
+    --circus-blue: #0f1ea8;
+    --circus-yellow: #eaa542;
+
+    --toy-red: #d12e3c;
+    --toy-blue: #8aa5d0;
+    --toy-yellow: #f0b200;
+    --toy-green: #55a867;
+
+    --beach-sand: #edd5c0;
+    --beach-water: #b3d9e0;
+    --beach-foam: #92ada4;
+
+    --sunset-light: #f2d6a1;
+    --sunset-med: #f1a805;
+    --sunset-dark: #84572f;
+
+    --pool-sky: #c3d7ea;
+    --pool-breeze: #6d8ec5;
+    --pool-water: #4173B0;
+    --pool-ball: #d3622d;
+    --pool-sunscreen: #f0c846;
+    --pool-towel: #eabcb5;
+
+    --black-slate: #444343;
+    --black-sand: #333333;
+    --black-screen: #1e1e1e;
+
+    /* Typeface library */
+    
+}
