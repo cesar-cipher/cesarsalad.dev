@@ -4,14 +4,18 @@ export interface CardEntryProps {
     id: string;
     title: string;
     subtitle?: string;
+    location?: string;
     description: string;
 }
 
-const CardEntry = ({id, title, subtitle, description}: CardEntryProps) => {
+const CardEntry = ({id, title, subtitle, location, description}: CardEntryProps) => {
     return (
         <div className={styles.cardEntry} key={id} id={id}>
-            <h3>{title}</h3>
-            {subtitle && <h4>{subtitle}</h4>}
+            <div className={styles.cardEntryHeader}>
+                <h3>{title}</h3>
+                {subtitle && <h4>{subtitle}</h4>}
+                {location && <div className={styles.cardEntryLocation}>{location}</div>}
+            </div>
 
             {/* Render the string in CardEntry.description as HTML */}
             <div className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: description }}/>

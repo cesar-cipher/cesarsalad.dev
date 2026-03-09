@@ -16,6 +16,14 @@ body {
     color: black;
 }
 
+p + p { /* Space between adjacent paragraphs */
+    margin: 1em 0;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
 .App {
     background-color: var(--color-page-bg);
     min-height: 100%;    /* Page can grow beyond viewport */

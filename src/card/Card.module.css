@@ -27,13 +27,14 @@ CardSection: Each collection of entries of data, e.g. "Education"
     text-align: center;
 }
 
-.cardSection .h3 { /* subtitle is optional */
-    display: float;
-}
-
 /*
 CardEntry: The individual card(s) inside each CardSection, e.g. "Boston University"
     Component is CardEntry.tsx
+    Subcomponents:
+        h3 == title of the card
+        h4 == subtitle of the card (optional)
+        .cardEntryLocation == optional location, in regular text size
+        .cardEntryDesc = description of the card
 */
 .cardEntry {
     height: auto;
@@ -47,6 +48,15 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     text-align: left;
 }
 
-.cardEntry .cardEntryDesc {
-    margin-top: 2%;
+.cardEntryHeader {
+    padding-bottom: 1rem;
+}
+
+.cardEntryLocation {
+    font-style: italic;
+}
+
+.cardEntryDesc ul {
+    list-style-position: outside; /* This is the default, but making it explicit */
+    padding-left: 1rem; /* I don't want my bullets to sit outside the description box! */
 }
