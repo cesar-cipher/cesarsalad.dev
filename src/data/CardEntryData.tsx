@@ -3,7 +3,7 @@ import type { CardSectionProps } from "../card/CardSection.tsx";
 export const sections: CardSectionProps[] = [
     {
         title: "César Cano",
-        subtitle: "Back-End Software Engineer",
+        subtitle: "Back-end Software Engineer",
         entries: [
             {
                 title: "Hi, I'm César - like the salad",
@@ -20,12 +20,13 @@ export const sections: CardSectionProps[] = [
                     <br>
                     <p>
                         During my time as a student, I had internships at <strong>Siemens Energy</strong> and 
-                        <strong>Drift.com (now Salesloft)</strong>, and completed mentorships with <strong>Wallbreakers</strong> and 
-                        <strong>Facebook's "Above and Beyond Computer Science" (ABCS)</strong> program.
+                        <strong>Drift.com (now Salesloft)</strong>, and also completed mentorships with <strong>Wallbreakers</strong> and 
+                        <strong>Facebook's "Above and Beyond Computer Science" (ABCS)</strong> training program.
                     </p>
+                    <br>
                     <p>
                         By the way, I previously used my birth name <strong><em>Ishmael Perez</em></strong>, and I filed a legal name change 
-                        at the end of 2025 to use a less typo-prone first name along with my family's surname.
+                        at the end of 2025. I wanted to use a less typo-prone first name along with my family's surname. Plus, I really do love caesar salads.
                     </p>
                 `,
             }
@@ -90,10 +91,10 @@ export const sections: CardSectionProps[] = [
                 </p>
                 <p>
                     The first state to launch with Apple was <a href="https://www.apple.com/newsroom/2022/03/apple-launches-the-first-drivers-license-and-state-id-in-wallet-with-arizona/">Arizona in March of 2022</a>. 
-                    Since then, the same server code has been expanded to support <a href="https://learn.wallet.apple/id#states-list">14 total states</a>, as of March 2025.
+                    Since then, the same server code has been expanded to support <a href="https://learn.wallet.apple/id#states-list">14 total states</a>, as of March 2026.
                 </p>
                 <p>
-                    I worked on back-end server code for the project before its launch. Some of my achievements were:
+                    I worked on back-end server code for the project before its launch. Some of my responsibilities and achievements were:
                 </p>
                 <ul>
                     <li>
@@ -135,23 +136,45 @@ export const sections: CardSectionProps[] = [
                     throughout the fall semester while studying full-time and working a second job as a Resident Assistant at BU.
                 </p>
                 <p>
-                    <em>By the way: <a href="https://www.salesloft.com/company/newsroom/salesloft-acquires-drift">Drift was acquired by Salesloft</a> in February, 2024,
+                    My internship was split between working on the front-end of the Drift Video Android app in Kotlin, and 
+                    building out the Drift Video iOS app's test suite in Swift. This app was new to Drift's suite of tools, 
+                    and provided a new sales resource for thousands of marketers who used Drift daily.
+                </p>
+                <p>
+                    <em>By the way: <a href="https://www.salesloft.com/company/newsroom/salesloft-acquires-drift">Drift was acquired by Salesloft</a> in February of 2024,
                     in case you're looking it up for more information!</em>
                 </p>
                 <p>
-                    My internship started with working on the Drift Video app's Android front-end in Kotlin, and its iOS 
-                    app's test suite in Swift. This app was new to Drift's suite, and provided a new tool to 
-                    the thousands of marketers who used Drift daily as a sales tool.
+                    To speak about my internship's duties in detail:
                 </p>
-                <p>
-                    I started my internship by creating the first front-end components of the Drift Video app 
-                    for Android. Using Kotlin, I built the main menu and used existing Android libraries to match the recording 
-                    and playback features of the iOS version on Android natively. I was new to front-end work, and learned Kotlin 
-                    on the job to design an Android prototype using the existing iOS app as a visual and functional reference.
-                </p>
-                <p>
-                    The second part of my internship consisted of enriching the automated test suite of Drift Video's iOS app. 
-                </p>
+                <ul>
+                    <li>
+                        I started my internship by creating the first front-end components of the Drift Video app 
+                        for Android. Using Kotlin, I built the main menu and used existing Android libraries like CameraX and OkHttp 
+                        to build and test the recording and playback features already present on the iOS version of the app.
+                        <ul>
+                            <li>
+                                I was new to front-end work, and learned Kotlin on the job. I "translated" the iOS Swift code to Kotlin
+                                and researched robust, secure libraries to duplicate the iOS app's capabilities.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        For the second half of my internship, I pivoted from Android to iOS development. The existing Drift Video app 
+                        on iOS worked, but it had low code coverage which caused breaking changes to go unnoticed. I used XCode's XCUITest 
+                        framework to write automated tests that would run before shipping to production.
+                    </li>
+                    <li>
+                        My tests compared final UIs after a series of inputs (e.g. typing value X and tapping button Y should land the user on screen Z) 
+                        and validated expected vs actual outputs for a given input generated randomly.
+                    </li>
+                    <li>
+                        The last stretch of my internship involved revamping the iOS app's UI/UX. I followed the MVC 
+                        (Model-View-Controller) design paradigm to rework the iOS app's login screen and video detail views.
+                        I used Postman to mock and verify HTTP POST request and response data like incorrect logins to verify 
+                        the UI components I wrote would work correctly.
+                    </li>
+                </ul>
                 `,
             },
         ]
@@ -163,14 +186,16 @@ export const sections: CardSectionProps[] = [
                 title: "Bachelor of Arts - Computer Science",
                 subtitle: "Boston University • Graduated May 2020",
                 description: `
-                <p>I studied computer science at BU. The university was very rigorous, and even more expensive! 
-                I worked multiple jobs while attending to pay through school.</p>
-                <p>My extracurriculars include:</p>
+                <p>
+                    I studied computer science at BU. The university was very rigorous, and even more expensive! 
+                    I worked multiple jobs while studying full time to pay each semester.
+                </p>
+                <p>My extracurriculars included:</p>
                 <ul>
                     <li>Member of <strong>Upsilon Pi Upsilon</strong> computer science honor society</li>
                     <li>Member of <strong>Society of Hispanic Professional Engineers (SHPE)</strong>
                     <ul>
-                        <li>Winner of 2019 Chevron Scholarship</li>
+                        <li>Winner of SHPE's 2019 <strong>Chevron Scholarship</strong></li>
                     </ul>
                     </li>
                 </ul>
