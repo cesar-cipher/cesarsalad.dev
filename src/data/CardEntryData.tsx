@@ -234,5 +234,35 @@ export const sections: CardSectionProps[] = [
                 `
             }
         ]
+    },
+    {
+        title: "Hobbies",
+        entries: [
+            {
+                title: "Nothing Special, Co.",
+                subtitle: "My sewing project! • Launched October 2025",
+                location: "San Francisco",
+                description: `
+                    <p>
+                        After many years of hemming my clothes to fit my 5'4" self, I decided to take 
+                        sewing more seriously as a passion project, rather than a little hobby in my bedroom.
+                    </p>
+                    <p>
+                        The largest part of my "sabbatical" after quitting my job in June of 2025 has been focused on 
+                        creating my own clothing brand by doing industry research and joining a small business mentorship program 
+                        hosted by the SF LGBT Center. I invested in a sewing studio in the SoMa neighborhood, worked with 
+                        a graphic designer to create branding, and have spent countless hours learning pattern drafting and 
+                        garment construction (in addition to a lot of seam ripping).
+                    </p>
+                    <p>
+                        While I haven't launched an online store yet, I continue to design patterns and sew garments like 
+                        summery shirts and shorts sets, plus utility items like sleek bike-frame bags.
+                    </p>
+                    <p>
+                        My projects can be viewed <a href="https://www.instagram.com/nothing.special.co/">on the Instagram page I created for the brand</a>.
+                    </p>
+                `
+            }
+        ]
     }
 ];
