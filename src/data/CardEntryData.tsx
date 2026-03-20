@@ -177,6 +177,38 @@ export const sections: CardSectionProps[] = [
                 </ul>
                 `,
             },
+            {
+                title: "Technical Intern",
+                subtitle: "Siemens • September 2017 - March 2019",
+                location: "Orlando, FL • On site (and remote)",
+                description: `
+                <p>
+                    My first internship! I worked in office when I started, and was lucky enough to be granted remote work 
+                    when I transferred from the University of Central Florida to Boston University at the start of 2019.
+                </p>
+                <p>
+                    My work largely consisted of optimizing existing Apex (Salesforce's proprietary Java-like language) code 
+                    to remove redundancies, write new classes with fields and logic requested by Siemens clients, and write/rewrite 
+                    test classes to reach at least 90% code coverage.
+                </p>
+                <ul>
+                    <li>
+                        A large part of my work was documenting existing procedures that the wind energy division previously 
+                        performed by hand, and then writing Apex classes and SQL code to automate the process. 
+                        My automation work, like bulk data processing for accounts and invalid data detection and removal, saved 
+                        countless hours of manual data collection and prrevented human-prone errors - in addition to removing a 
+                        long, arduous process for wind energy employees.
+                    </li>
+                    <li>
+                        I performed a bit of "extra credit" by making sure all classes I touched would reach at least 90% code coverage, 
+                        regardless of if I wrote them from scratch or was modifying an existing class. My priority was clean code that 
+                        could be checked for correctness via these automatic tests, in addition to tests that would catch breaking changes. 
+                        My only compromise was time, since I didn't want my meticulousness to delay deadlines - so I noted test classes to 
+                        revisit when I had any downtime later on in the internship.
+                    </li>
+                </ul>
+                `,
+            }
         ]
     },
     {
