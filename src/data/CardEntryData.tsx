@@ -6,7 +6,7 @@ export const sections: CardSectionProps[] = [
         subtitle: "Back-end Software Engineer",
         entries: [
             {
-                title: "Hi, I'm César - like the salad",
+                title: "Hi, I'm César (like the salad)",
                 description: `
                     <p>
                         I'm a <strong>back-end software engineer</strong> with over 
@@ -260,6 +260,26 @@ export const sections: CardSectionProps[] = [
                     </p>
                     <p>
                         My projects can be viewed <a href="https://www.instagram.com/nothing.special.co/">on the Instagram page I created for the brand</a>.
+                    </p>
+                `
+            },
+            {
+                title: "Piano and music",
+                subtitle: "Arranging song covers by ear and busking",
+                location: "San Francisco",
+                description: `
+                    <p>
+                        Playing piano has been one of my biggest passions for close to 20 years now. I've loved 
+                        arranging covers to my favorite songs and recording them for YouTube and live busking in 
+                        my neighborhood.
+                    </p>
+                    <p>
+                        The songs for which I've made covers range from Sabrina Carpenter to L'Impératrice to Radiohead, 
+                        and I challenge myself to learn new techniques with each one - especially since I haven't received 
+                        professional lessons since I was about 12 years old!
+                    </p>
+                    <p>
+                        My piano recordings can be viewed <a href="https://www.youtube.com/ishfulthinking">on my YouTube channel here</a>.
                     </p>
                 `
             }
