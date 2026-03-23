@@ -236,6 +236,36 @@ export const sections: CardSectionProps[] = [
         ]
     },
     {
+        title: "Projects",
+        entries: [
+            {
+                title: "Portfolio website in React",
+                subtitle: "February 2026 → Present",
+                description: `
+                <p>
+                    The website you see right now is all coded by hand by me, with no AI input. 
+                    Although I'm mainly a back-end SWE, I wanted to expand my horizons and learn some React 
+                    so I could create this portfolio website <em>and</em> carry the learnings into my future projects. 
+                    Plus, by making it a learning opportunity, I could also add in my creative tastes and design ideas!
+                </p>
+                <p>
+                    I had a personal portfolio site prior to this, but it used my old legal name and was coded using Bootstrap with 
+                    a bunch of spaghetti code. It wasn't very pretty inside or out, to say the least. I decided to start from scratch 
+                    and set up a master plan <em>before</em> touching the code, and learn React by real-time practice.
+                </p>
+                <p>
+                    The code is all written in Typescript and HTML/CSS (of course). I opted to use base CSS rather than a 
+                    library like Tailwind or Pico since it's such a small website, and it felt superfluous to import a library.
+                </p>
+                <p>
+                    This website's code and Git history are all visible <a href="https://github.com/cesar-cipher/cesarsalad.dev">on my Github repo here</a>.
+                </p>
+                `
+            }
+        ]
+
+    },
+    {
         title: "Hobbies",
         entries: [
             {
