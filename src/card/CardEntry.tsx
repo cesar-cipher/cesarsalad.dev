@@ -3,8 +3,6 @@ import { TechStack } from "./TechStack.tsx";
 
 // Basic props
 export interface CardEntryProps {
-    kind: string;
-    id: string;
     title: string;                      // Left-hand detail, name of job/project/etc.
     subtitle?: string;                  // Left-hand detail, company/summary/etc.
     upperRightCorner?: React.ReactNode; // Slot for upper right-hand corner details
@@ -22,7 +20,7 @@ export interface TechnicalCardEntryProps extends CardEntryProps {
     techStack: string[];                // Footer with badges for languages, frameworks etc.
 }
 
-// Union for all CardEntry types (to be used in CardSection.tsx)
+// Union for all CardEntry types (to be used by CardSection.tsx)
 export type AnyCardEntry = 
     | { kind: "BASIC";      props: CardEntryProps }
     | { kind: "TECHNICAL";  props: TechnicalCardEntryProps };
@@ -30,9 +28,9 @@ export type AnyCardEntry =
 
 
 /* BASIC CARD ENTRY: General use; contains two slots for additional data in children props */
-export function CardEntry({id, title, subtitle, upperRightCorner, desc, descExpansion, aside, footer}: CardEntryProps) {
+export function CardEntry({title, subtitle, upperRightCorner, desc, descExpansion, aside, footer}: CardEntryProps) {
     return (
-        <article className={styles.cardEntry} key={id} id={id}>
+        <article className={styles.cardEntry}>
             {/* Upper left corner details */}
             <div className={styles.cardEntryUpperLeftCorner}>
                 <h3 className={styles.cardEntryTitle}>{title}</h3>
