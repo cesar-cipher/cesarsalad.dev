@@ -1,4 +1,5 @@
 import styles from "./Card.module.css";
+import DescExpansion from "./DescExpansion.tsx";
 import { TechStack } from "./TechStack.tsx";
 
 // Basic props
@@ -43,10 +44,10 @@ export function CardEntry({title, subtitle, upperRightCorner, description, descE
 
             {/* Do the same for .descExpansion, if it's present */}
             {descExpansion &&
-                <>
-                <span className={styles.cardEntryDescExpansionPreview} dangerouslySetInnerHTML={{ __html: descExpansion[0] }}/>
-                <span className={styles.cardEntryDescExpansionText}    dangerouslySetInnerHTML={{ __html: descExpansion[1] }}/>
-                </>
+                <DescExpansion
+                    previewText={descExpansion[0]}
+                    expansionText={descExpansion[1]}
+                />
             }
 
             {/* Slot for any elements below the main cardEntry elements */}
