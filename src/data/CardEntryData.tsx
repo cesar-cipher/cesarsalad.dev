@@ -2,11 +2,12 @@ import type { CardSectionProps } from "../card/CardSection.tsx";
 
 export const sections: CardSectionProps[] = [
     {
-        title: "César Cano",
+        title: "Cesar Cano",
         subtitle: "Back-end Software Engineer",
+        kind: "BASIC",
         entries: [
             {
-                title: "Hi, I'm César (like the salad)",
+                title: "Hi, I'm Cesar (like the salad)",
                 description: `
                     <p>
                         I'm a <strong>back-end software engineer</strong> with over 
@@ -256,10 +257,12 @@ export const sections: CardSectionProps[] = [
     },
     {
         title: "Projects",
+        kind: "TECHNICAL",
         entries: [
             {
                 title: "Portfolio website in React",
-                subtitle: "February 2026 → Present",
+                subtitle: "Fully-from-scratch single-page application",
+                duration: "February 2026 → Present",
                 description: `
                 <p>
                     The website you see right now is all coded by hand by me, with no AI input. 
@@ -279,13 +282,15 @@ export const sections: CardSectionProps[] = [
                 <p>
                     This website's code and Git history are all visible <a href="https://github.com/cesar-cipher/cesarsalad.dev">on my Github repo here</a>.
                 </p>
-                `
+                `,
+                techStack: ["REACT", "TYPESCRIPT", "HTMLCSS"]
             }
         ]
 
     },
     {
         title: "Hobbies",
+        kind: "BASIC",
         entries: [
             {
                 title: "Nothing Special, Co.",
