@@ -38,7 +38,7 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 */
 .cardEntry {
     height: auto;
-    min-height: 160px;  /* Avoid any crazy-short entries */
+    min-height: 160px;  /* Avoid any crazy-short entries making the box too thin */
     width: 95%;
     margin: 1% auto; /* No margin on top/bottom; centered left/right */
     padding: 3%;
@@ -48,15 +48,71 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     text-align: left;
 }
 
-.cardEntryHeader {
-    padding-bottom: 1rem;
+/* Holds {title} + {subtitle} */
+.cardEntryUpperLeftCorner {
+
+}
+
+.cardEntryTitle {
+
+}
+
+.cardEntrySubtitle {
+
+}
+
+/* Holds {duration} and {location} in TechnicalCardEntry */
+.cardEntryUpperRightCorner {
+
+}
+
+.cardEntryDuration {
+
 }
 
 .cardEntryLocation {
-    font-style: italic;
+
+}
+
+/* Separate styling from the expandable part! */
+.cardEntryDesc {
+
 }
 
 .cardEntryDesc ul {
     list-style-position: outside; /* This is the default, but making it explicit */
     padding-left: 1rem; /* I don't want my bullets to sit outside the description box! */
+}
+
+
+.cardEntryCallout {
+
+}
+
+
+/* The descExpansion component has two parts:
+    - the preview bar (which serves as a button),
+    - the actual description that expands/shrinks when the button is clicked.
+*/
+.cardEntryDescExpansionPreview {
+
+}
+
+.cardEntryDescExpansionText {
+
+}
+
+/* For TechnicalCardEntry, the footer is a list of the entry's tech stack */
+.techStack {
+
+}
+/* Actual tech element in techStack, e.g. TypeScript */
+.techStackEntry {
+
+}
+.techStackEntryIcon {
+
+}
+.techStackEntryLabel {
+    
 }

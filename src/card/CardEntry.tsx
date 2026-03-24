@@ -39,7 +39,7 @@ export function CardEntry({title, subtitle, upperRightCorner, description, descE
             <span className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: description }}/>
 
             {/* Display the callout message, if it's present. It's set above the expansion part so it's harder to miss */}
-            {callout && <aside className={styles.cardEntryAside} dangerouslySetInnerHTML={{ __html: callout }}/>}
+            {callout && <aside className={styles.cardEntryCallout} dangerouslySetInnerHTML={{ __html: callout }}/>}
 
             {/* Do the same for .descExpansion, if it's present */}
             {descExpansion &&
