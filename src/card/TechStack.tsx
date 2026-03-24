@@ -6,11 +6,11 @@ const TechType: Record<string, {icon: string, label: string}> = {
     PYTHON:     {icon: "🐍", label: "Python"},
     SQL:        {icon: "🛢️", label: "SQL"},
     // Front-end
-    REACT:      {icon: "⚛️", label: "Java"},
-    TYPESCRIPT: {icon: "🛂", label: "Java"},
-    HTMLCSS:    {icon: "✴️", label: "Java"},
-    KOTLIN:     {icon: "💟", label: "Java"},
-    SWIFT:      {icon: "🈳", label: "Java"},
+    REACT:      {icon: "⚛️", label: "React"},
+    TYPESCRIPT: {icon: "🛂", label: "TypeScript"},
+    HTMLCSS:    {icon: "✴️", label: "HTML/CSS"},
+    KOTLIN:     {icon: "💟", label: "Kotlin"},
+    SWIFT:      {icon: "🈳", label: "Swift"},
 }
 
 // Union type for exports
@@ -23,6 +23,13 @@ interface TechStackProps {
 }
 
 export function TechStack({skills}: TechStackProps) {
+    // A little kick in the butt for myself
+    if (!skills) {
+        return (
+            <h1>🚨 You were supposed to put your text stack here! 🚨</h1>
+        );
+    }
+
     return (
         <ul className={styles.techStack}>
             {skills.map(key => {

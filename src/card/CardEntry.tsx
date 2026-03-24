@@ -9,7 +9,7 @@ export interface CardEntryProps {
     description: string;                       // Short blurb about the entry; always visible
     descExpansion?: [string, string];   // Detailed blurb about the entry; button must be clicked to view
                                         //     key = preview text; value = full detail entry
-    aside?: string;                     // Callout for any important info
+    callout?: string;                   // Callout for any important info
     footer?: React.ReactNode;           // Slot for elements at the bottom of the entry
 }
 
@@ -23,7 +23,7 @@ export interface TechnicalCardEntryProps extends CardEntryProps {
 
 
 /* BASIC CARD ENTRY: General use; contains two slots for additional data in children props */
-export function CardEntry({title, subtitle, upperRightCorner, description, descExpansion, aside, footer}: CardEntryProps) {
+export function CardEntry({title, subtitle, upperRightCorner, description, descExpansion, callout, footer}: CardEntryProps) {
     return (
         <article className={styles.cardEntry}>
             {/* Upper left corner details */}
@@ -37,6 +37,10 @@ export function CardEntry({title, subtitle, upperRightCorner, description, descE
 
             {/* Render the CardEntry.description via pre-typed HTML */}
             <span className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: description }}/>
+
+            {/* Display the callout message, if it's present. It's set above the expansion part so it's harder to miss */}
+            {callout && <aside className={styles.cardEntryAside} dangerouslySetInnerHTML={{ __html: callout }}/>}
+
             {/* Do the same for .descExpansion, if it's present */}
             {descExpansion &&
                 <>
@@ -44,9 +48,6 @@ export function CardEntry({title, subtitle, upperRightCorner, description, descE
                 <span className={styles.cardEntryDescExpansionText}    dangerouslySetInnerHTML={{ __html: descExpansion[1] }}/>
                 </>
             }
-            
-            {/* Display the aside message, if it's present */}
-            {aside && <span className={styles.cardEntryAside}>{aside}</span>}
 
             {/* Slot for any elements below the main cardEntry elements */}
             {footer}

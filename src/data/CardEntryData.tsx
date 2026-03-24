@@ -25,33 +25,37 @@ export const sections: CardSectionProps[] = [
                     </p>
                     <br>
                     <p>
-                        By the way, I previously used my birth name <strong><em>Ishmael Perez</em></strong>, and I filed a legal name change 
-                        at the end of 2025. I wanted to use a less typo-prone first name along with my family's surname. Plus, I really do love caesar salads.
+                        
                     </p>
                 `,
+                callout: `
+                    By the way, I previously used my birth name <strong><em>Ishmael Perez</em></strong>, and I filed a legal name change 
+                    at the end of 2025. I wanted to use a less typo-prone first name along with my family's surname. Plus, I really do love caesar salads.
+                `
             }
         ]
     },
     {
         title: "Employment",
+        kind: "TECHNICAL",
         entries: [
             {
                 title: "Software Engineer - Access (Digital Car Key)",
-                subtitle: "Apple • October 2023 - June 2025",
+                subtitle: "Apple, Inc.",
+                duration: "October 2023 - June 2025",
                 location: "Cupertino, CA • Hybrid",
                 description: `
                 <p>
-                    After a few years working on Apple Pay's mobile driver license project, I wanted to learn by working 
-                    on a new project. I switched within Apple Pay to the Digital Car Key team.
+                    After a few years working on Apple Pay's mobile driver license project, I wanted to learn more 
+                    by working on a new project. I switched within Apple Pay to the Digital Car Key team.
                 </p>
                 <p>
-                    The Digital Car Key project manages provisioning, lending/borrowing, 
-                    and remote updates of car keys stored in the Apple Wallet, which 
-                    are compatible with many new models of cars from brands like BMW.
+                    For context: the Digital Car Key project manages provisioning, lending/borrowing, and remote updates of 
+                    car keys stored in the Apple Wallet, which are compatible with many new models of cars from brands like BMW.
                 </p>
-                <p>
-                    My core responsibilities and achievements included:
-                </p>
+                `,
+                descExpansion: [`My core responsibilities and achievements included:`,
+                `
                 <ul>
                     <li>
                         Refactored existing Digital Car Key server code to include features like 
@@ -77,11 +81,13 @@ export const sections: CardSectionProps[] = [
                         car key borrowing and lending, remote lending revocations, and test cases, along with their development cycles.
                     </li>
                 </ul>
-                `
+                `],
+                techStack: ["JAVA", "YAML"]
             },
             {
                 title: "Software Engineer - Identity",
-                subtitle: "Apple • September 2020 - October 2023",
+                subtitle: "Apple, Inc.",
+                duration: "September 2020 - October 2023",
                 location: "Cupertino, CA • Hybrid",
                 description: `
                 <p>
@@ -94,8 +100,11 @@ export const sections: CardSectionProps[] = [
                     Since then, the same server code has been expanded to support <a href="https://learn.wallet.apple/id#states-list">14 total states</a>, as of March 2026.
                 </p>
                 <p>
-                    I worked on back-end server code for the project before its launch. Some of my responsibilities and achievements were:
+                    I worked on back-end server code for the project before its launch and maintained the code as well.
                 </p>
+                `,
+                descExpansion: [`Some of my roles and achievements were:`,
+                `
                 <ul>
                     <li>
                         Refactoring existing REST APIs to support new variables like state acronym enums, and onboarded the first four 
@@ -124,11 +133,13 @@ export const sections: CardSectionProps[] = [
                         drastically reducing the amount of back-and-forth communication between the server engineering and iPhone localization teams.
                     </li>
                 </ul>
-                `,
+                `],
+                techStack: ["JAVA", "PYTHON"]
             },
             {
                 title: "Software Engineer Intern",
-                subtitle: "Drift.com (now Salesloft) • July 2019 - December 2019",
+                subtitle: "Drift.com (now Salesloft)",
+                duration: "July 2019 - December 2019",
                 location: "Boston, MA • On site",
                 description: `
                 <p>
@@ -140,13 +151,15 @@ export const sections: CardSectionProps[] = [
                     building out the Drift Video iOS app's test suite in Swift. This app was new to Drift's suite of tools, 
                     and provided a new sales resource for thousands of marketers who used Drift daily.
                 </p>
+                `,
+                callout: `
                 <p>
-                    <em>By the way: <a href="https://www.salesloft.com/company/newsroom/salesloft-acquires-drift">Drift was acquired by Salesloft</a> in February of 2024,
-                    in case you're looking it up for more information!</em>
+                    By the way: <a href="https://www.salesloft.com/company/newsroom/salesloft-acquires-drift">Drift was acquired by Salesloft</a> in February of 2024,
+                    in case you're looking it up for more information!
                 </p>
-                <p>
-                    To speak about my internship's duties in detail:
-                </p>
+                `,
+                descExpansion: [`To speak about my internship's duties in detail:`,
+                `
                 <ul>
                     <li>
                         I started my internship by creating the first front-end components of the Drift Video app 
@@ -175,12 +188,14 @@ export const sections: CardSectionProps[] = [
                         the UI components I wrote would work correctly.
                     </li>
                 </ul>
-                `,
+                `],
+                techStack: ["KOTLIN", "SWIFT"]
             },
             {
                 title: "Technical Intern",
-                subtitle: "Siemens • September 2017 - March 2019",
-                location: "Orlando, FL • On site (and remote)",
+                subtitle: "Siemens Energy AG",
+                duration: "September 2017 - March 2019",
+                location: "Orlando, FL • On site (and later remote)",
                 description: `
                 <p>
                     My first internship! I worked in office when I started, and was lucky enough to be granted remote work 
@@ -191,6 +206,9 @@ export const sections: CardSectionProps[] = [
                     to remove redundancies, write new classes with fields and logic requested by Siemens clients, and write/rewrite 
                     test classes to reach at least 90% code coverage.
                 </p>
+                `,
+                descExpansion: [`To get into detail about my internship:`,
+                `
                 <ul>
                     <li>
                         A large part of my work was documenting existing procedures that the wind energy division previously 
@@ -207,7 +225,8 @@ export const sections: CardSectionProps[] = [
                         revisit when I had any downtime later on in the internship.
                     </li>
                 </ul>
-                `,
+                `],
+                techStack: ["JAVA", "SQL"]
             }
         ]
     },
