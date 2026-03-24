@@ -22,8 +22,8 @@ const CardSection = ({title, subtitle, kind, entries}: CardSectionProps) => {
 
     return (
         <section className={styles.cardSection}>
-            <h2 className={styles.cardSectionTitle}>{title}</h2>
-            {subtitle && <h3 className={styles.cardSectionSubtitle}>{subtitle}</h3>}
+            <h2 className={styles.title}>{title}</h2>
+            {subtitle && <h3 className={styles.subtitle}>{subtitle}</h3>}
 
             {entries.map((entry, index) => renderEntry(entry, index))}
         </section>

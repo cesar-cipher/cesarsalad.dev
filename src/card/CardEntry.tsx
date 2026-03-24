@@ -28,19 +28,19 @@ export function CardEntry({title, subtitle, upperRightCorner, description, descE
     return (
         <article className={styles.cardEntry}>
             {/* Upper left corner details */}
-            <div className={styles.cardEntryUpperLeftCorner}>
-                <h3 className={styles.cardEntryTitle}>{title}</h3>
-                {subtitle && <h4 className={styles.cardEntrySubtitle}>{subtitle}</h4>}
+            <div className={styles.upperLeftCorner}>
+                <h3 className={styles.title}>{title}</h3>
+                {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
             </div>
 
             {/* Slot for upper right corner details */}
             {upperRightCorner}
 
             {/* Render the CardEntry.description via pre-typed HTML */}
-            <span className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: description }}/>
+            <span className={styles.description} dangerouslySetInnerHTML={{ __html: description }}/>
 
             {/* Display the callout message, if it's present. It's set above the expansion part so it's harder to miss */}
-            {callout && <aside className={styles.cardEntryCallout} dangerouslySetInnerHTML={{ __html: callout }}/>}
+            {callout && <aside className={styles.callout} dangerouslySetInnerHTML={{ __html: callout }}/>}
 
             {/* Do the same for .descExpansion, if it's present */}
             {descExpansion &&
@@ -62,9 +62,9 @@ export function TechnicalCardEntry({duration, location, techStack, ...basicProps
         <CardEntry
             {...basicProps}
             upperRightCorner={
-                <div className={styles.cardEntryUpperRightCorner}>
-                    {duration && <h5 className={styles.cardEntryDuration}>{duration}</h5>}
-                    {location && <h5 className={styles.cardEntryLocation}>{location}</h5>}
+                <div className={styles.upperRightCorner}>
+                    {duration && <h5 className={styles.duration}>{duration}</h5>}
+                    {location && <h5 className={styles.location}>{location}</h5>}
                 </div>
             }
             footer={

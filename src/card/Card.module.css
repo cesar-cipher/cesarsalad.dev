@@ -9,14 +9,17 @@ CardDeck: The main body of the page.
     min-width: 60px;
     height: auto;
     margin: 2%; /* 2% on top/bottom; centered on left/right */
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color-section-shade);
     display: flex; /* Just like before: Each content entry will be its own block */
     flex-direction: column; /* and those blocks will be arranged along the y-axis. */
 }
 
 /*
-CardSection: Each collection of entries of data, e.g. "Education"
+CardSection: Each section of data entries, e.g. "Education"
     Component is CardSection.tsx
+    Sub-elements:
+        .title (h2)
+        .subtitle? (h3)
 */
 .cardSection {
     height: auto;
@@ -27,14 +30,26 @@ CardSection: Each collection of entries of data, e.g. "Education"
     text-align: center;
 }
 
+.cardSection .title {
+    color: var(--color-text-title);
+}
+
+.cardSection .subtitle {
+    color: var(--color-text-subtitle);
+}
+
 /*
 CardEntry: The individual card(s) inside each CardSection, e.g. "Boston University"
     Component is CardEntry.tsx
-    Subcomponents:
-        h3 == title of the card
-        h4 == subtitle of the card (optional)
-        .cardEntryLocation == optional location, in regular text size
-        .cardEntryDesc = description of the card
+    Sub-elements:
+        .cardEntryUpperLeftCorner
+            .title (h3)
+            .subtitle? (h4)
+        .upperRightCorner (slot)
+        .cardEntryDesc (span)
+        .callout? (aside)
+        .descExpansion (Component DescExpansion; has its own section)
+        .footer (slot)
 */
 .cardEntry {
     height: auto;
@@ -42,44 +57,38 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     width: 95%;
     margin: 1% auto; /* No margin on top/bottom; centered left/right */
     padding: 3%;
-    background-color: var(--pool-sky);
-    border: 1px solid var(--black-sand);
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
     border-radius: 4px;
     text-align: left;
 }
 
 /* Holds {title} + {subtitle} */
-.cardEntryUpperLeftCorner {
-
+.cardEntry > .upperLeftCorner {
+    background-color: var(--color-section-shade);
 }
 
-.cardEntryTitle {
-
+.cardEntry .title {
+    color: var(--color-text-title);
 }
 
-.cardEntrySubtitle {
-
+.cardEntry .subtitle {
+    color: var(--color-text-subtitle);
 }
 
-/* Holds {duration} and {location} in TechnicalCardEntry */
-.cardEntryUpperRightCorner {
-
-}
-
-.cardEntryDuration {
-
-}
-
-.cardEntryLocation {
-
+/*
+.cardEntryUpperRightCorner is an empty slot in base CardEntry.
+*/
+.cardEntry > .upperRightCorner {
+    background-color: var(--color-section-shade);
 }
 
 /* Separate styling from the expandable part! */
-.cardEntryDesc {
-
+.cardEntry .description {
+    color: var(--color-text-body);
 }
 
-.cardEntryDesc ul {
+.cardEntry .description ul {
     list-style-position: outside; /* This is the default, but making it explicit */
     padding-left: 1rem; /* I don't want my bullets to sit outside the description box! */
 }
@@ -94,14 +103,36 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     - the preview bar (which serves as a button),
     - the actual description that expands/shrinks when the button is clicked.
 */
-.cardEntryDescExpansionPreview {
+.descExpansion {
+
+}
+.descExpansion.open {
+
+}
+.descExpansionTrigger {
+
+}
+.descExpansionPreview {
+
+}
+.descExpansionPreview.open {
+
+}
+.descExpansionText {
 
 }
 
-.cardEntryDescExpansionText {
+/*
+TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
+    Component is TechnicalCardEntry.tsx
+    Sub-elements:
+        .upperRightCorner -> .cardEntryUpperRightCorner
+            .duration (h5)
+            .location (h5)
+        .footer -> .techStack (Component TechStack)
+*/
 
-}
-
+.upperRightCorner
 /* For TechnicalCardEntry, the footer is a list of the entry's tech stack */
 .techStack {
 
@@ -114,5 +145,5 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 
 }
 .techStackEntryLabel {
-    
+
 }
