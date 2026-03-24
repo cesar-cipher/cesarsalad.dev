@@ -6,7 +6,7 @@ export interface CardEntryProps {
     title: string;                      // Left-hand detail, name of job/project/etc.
     subtitle?: string;                  // Left-hand detail, company/summary/etc.
     upperRightCorner?: React.ReactNode; // Slot for upper right-hand corner details
-    desc: string;                       // Short blurb about the entry; always visible
+    description: string;                       // Short blurb about the entry; always visible
     descExpansion?: [string, string];   // Detailed blurb about the entry; button must be clicked to view
                                         //     key = preview text; value = full detail entry
     aside?: string;                     // Callout for any important info
@@ -20,15 +20,10 @@ export interface TechnicalCardEntryProps extends CardEntryProps {
     techStack: string[];                // Footer with badges for languages, frameworks etc.
 }
 
-// Union for all CardEntry types (to be used by CardSection.tsx)
-export type AnyCardEntry = 
-    | { kind: "BASIC";      props: CardEntryProps }
-    | { kind: "TECHNICAL";  props: TechnicalCardEntryProps };
-
 
 
 /* BASIC CARD ENTRY: General use; contains two slots for additional data in children props */
-export function CardEntry({title, subtitle, upperRightCorner, desc, descExpansion, aside, footer}: CardEntryProps) {
+export function CardEntry({title, subtitle, upperRightCorner, description, descExpansion, aside, footer}: CardEntryProps) {
     return (
         <article className={styles.cardEntry}>
             {/* Upper left corner details */}
@@ -41,7 +36,7 @@ export function CardEntry({title, subtitle, upperRightCorner, desc, descExpansio
             {upperRightCorner}
 
             {/* Render the CardEntry.description via pre-typed HTML */}
-            <span className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: desc }}/>
+            <span className={styles.cardEntryDesc} dangerouslySetInnerHTML={{ __html: description }}/>
             {/* Do the same for .descExpansion, if it's present */}
             {descExpansion &&
                 <>
