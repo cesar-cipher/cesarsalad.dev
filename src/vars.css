@@ -5,8 +5,11 @@
     --color-section-shade: var(--color-shadow-light);
 
     --color-card-bg: var(--color-white-light);
+    --color-card-bg-light: white;
+    --color-card-bg-dark: var(--color-white-med);
     --color-card-border: var(--circus-red-dark);
     --color-card-divider: var(--circus-red);
+    --color-card-callout: var(--circus-yellow);
 
     --color-text-title: var(--color-black-med);
     --color-text-subtitle: var(--color-black-light);

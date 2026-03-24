@@ -59,13 +59,13 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     padding: 3%;
     background-color: var(--color-card-bg);
     border: 1px solid var(--color-card-border);
-    border-radius: 4px;
+    border-radius: 5px;
     text-align: left;
 }
 
 /* Holds {title} + {subtitle} */
-.cardEntry > .upperLeftCorner {
-    background-color: var(--color-section-shade);
+.cardEntry .upperLeftCorner {
+    
 }
 
 .cardEntry .title {
@@ -78,9 +78,10 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 
 /*
 .cardEntryUpperRightCorner is an empty slot in base CardEntry.
+    This should be described only structurally; let the specific use case determine color, text size, etc.
 */
-.cardEntry > .upperRightCorner {
-    background-color: var(--color-section-shade);
+.cardEntry .upperRightCorner {
+    
 }
 
 /* Separate styling from the expandable part! */
@@ -88,16 +89,21 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     color: var(--color-text-body);
 }
 
-.cardEntry .description ul {
+.cardEntry ul {
     list-style-position: outside; /* This is the default, but making it explicit */
     padding-left: 1rem; /* I don't want my bullets to sit outside the description box! */
 }
 
 
-.cardEntryCallout {
-
+.cardEntry .callout {
+    background-color: var(--color-card-bg-light);
+    border: 1px solid var(--color-card-callout);
+    border-left: 3px solid var(--color-card-callout);
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 0.9rem;
+    color: var(--color-text-subtitle);
 }
-
 
 /* The descExpansion component has two parts:
     - the preview bar (which serves as a button),
@@ -132,12 +138,19 @@ TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
         .footer -> .techStack (Component TechStack)
 */
 
-.upperRightCorner
+.upperRightCorner > .duration {
+
+}
+
+.upperRightCorner > .location {
+
+}
+
 /* For TechnicalCardEntry, the footer is a list of the entry's tech stack */
 .techStack {
 
 }
-/* Actual tech element in techStack, e.g. TypeScript */
+/* Actual tech entry in techStack, e.g. TypeScript */
 .techStackEntry {
 
 }
