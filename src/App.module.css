@@ -14,14 +14,20 @@ html, body {
 
 body {
     color: black;
+    font: var(--typeface-body);
 }
 
-p + p { /* Space between adjacent paragraphs */
-    margin: 1em 0;
+p { /* Space between adjacent paragraphs */
+    margin: 0.5em 0;
 }
 
 li {
     margin: 0.5em 0;
+}
+
+hr {
+    margin: 1em 0;
+    border-color: var(--color-shadow-dark);
 }
 
 .App {

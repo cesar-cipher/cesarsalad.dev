@@ -8,7 +8,7 @@ CardDeck: The main body of the page.
     max-width: 1200px; /* Common max-width for desktop */
     min-width: 60px;
     height: auto;
-    margin: 2%; /* 2% on top/bottom; centered on left/right */
+    margin: 2% auto; /* 2% on top/bottom; centered on left/right */
     background-color: var(--color-section-shade);
     display: flex; /* Just like before: Each content entry will be its own block */
     flex-direction: column; /* and those blocks will be arranged along the y-axis. */

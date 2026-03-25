@@ -11,22 +11,17 @@ export const sections: CardSectionProps[] = [
                 description: `
                     <p>
                         I'm a <strong>back-end software engineer</strong> with over 
-                        <strong>5 years of professional experience at Apple</strong> 
-                        in their Apple Pay division, working on the Identity and Digital Car Key projects.
+                        <strong>5 years of professional experience at Apple</strong>, 
+                        working on the Identity and Digital Car Key projects.
                     </p>
                     <p>
                         Prior to my role at Apple, I completed a <strong>Bachelor of Arts in Computer Science degree</strong> 
                         at <strong>Boston University</strong>.
                     </p>
-                    <br>
                     <p>
                         During my time as a student, I had internships at <strong>Siemens Energy</strong> and 
                         <strong>Drift.com (now Salesloft)</strong>, and also completed mentorships with <strong>Wallbreakers</strong> and 
                         <strong>Facebook's "Above and Beyond Computer Science" (ABCS)</strong> training program.
-                    </p>
-                    <br>
-                    <p>
-                        
                     </p>
                 `,
                 callout: `

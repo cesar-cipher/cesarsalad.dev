@@ -34,11 +34,9 @@
 
 
     /* Typeface vars for use */
-    /*
-        --typeface-body:
-        --typeface-strong:
-        --typeface-accent:
-    */
+    --typeface-body: normal normal 400 1rem/1.4 "Caladea", serif;
+    --typeface-strong: normal normal 700 1rem/1.4 "Caladea", serif;
+    --typeface-emphasis: italic normal 400 1rem/1.4 "Caladea", serif;
 
 
     /* COLOR LIBRARY */
@@ -80,5 +78,27 @@
     --black-screen: #1e1e1e;
 
     /* Typeface library */
-    
+    .caladea-regular {
+        font-family: "Caladea", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .caladea-bold {
+        font-family: "Caladea", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .caladea-regular-italic {
+        font-family: "Caladea", serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .caladea-bold-italic {
+        font-family: "Caladea", serif;
+        font-weight: 700;
+        font-style: italic;
+    }
 }
