@@ -1,45 +1,36 @@
 :root {
-    /* COLOR BY USE: Dye variables, by use */
-    --color-page-bg: var(--circus-cream);
+    /* COLOR BY USE: Pigmented variables, by use */
+    --color-text-title:             var(--color-black-med);
+    --color-text-subtitle:          var(--color-black-light);
+    --color-text-body:              var(--color-black-light);
 
-    --color-section-shade: var(--color-shadow-light);
+    --color-page-bg:                var(--circus-cream);
 
-    --color-card-bg: var(--color-white-light);
-    --color-card-bg-light: white;
-    --color-card-bg-dark: var(--color-white-med);
-    --color-card-border: var(--circus-red-dark);
-    --color-card-divider: var(--circus-red);
-    --color-card-callout: var(--circus-yellow);
+    --color-deck-bg:                var(--color-shadow-light);
 
-    --color-text-title: var(--color-black-med);
-    --color-text-subtitle: var(--color-black-light);
-    --color-text-body: var(--color-black-light);
+    --color-card-bg:                var(--color-white-light);
+    --color-card-border:            var(--circus-red-dark);
+    --color-card-divider:           var(--circus-red);
 
+    --color-card-callout-bg:        white;
+    --color-card-callout-border:    var(--circus-yellow);
 
     /* COLOR BY SHADE: Monochrome variables, by shade */
-    --color-white-light: var(--paper-new);
-    --color-white-med: var(--paper-aged);
-    --color-white-dark: var(--paper-recycled);
+    --color-white-light:            var(--paper-new);
+    --color-white-med:              var(--paper-aged);
+    --color-white-dark:             var(--paper-recycled);
 
-    --color-black-lightest: var(--paper-smudge);
-    --color-black-light: var(--black-slate);
-    --color-black-med: var(--black-sand);
-    --color-black-dark: var(--black-screen);
-    --color-black-darkest: var(--paper-ink);
+    --color-black-lightest:         var(--paper-smudge);
+    --color-black-light:            var(--black-slate);
+    --color-black-med:              var(--black-sand);
+    --color-black-dark:             var(--black-screen);
+    --color-black-darkest:          var(--paper-ink);
 
-    --color-shadow-light: rgba(0, 0, 0, 0.05);
-    --color-shadow-med: rgba(0, 0, 0, 0.1);
-    --color-shadow-dark: rgba(0, 0, 0, 0.2);
+    --color-shadow-light:          rgba(0, 0, 0, 0.05);
+    --color-shadow-med:            rgba(0, 0, 0, 0.1);
+    --color-shadow-dark:           rgba(0, 0, 0, 0.2);
 
-
-
-    /* Typeface vars for use */
-    --typeface-body: normal normal 400 1rem/1.4 "Caladea", serif;
-    --typeface-strong: normal normal 700 1rem/1.4 "Caladea", serif;
-    --typeface-emphasis: italic normal 400 1rem/1.4 "Caladea", serif;
-
-
-    /* COLOR LIBRARY */
+    /* COLOR library */
     --circus-cream: #f3e5cb;
     --circus-red: #ff0000;
     --circus-red-dark: #db0505;
@@ -77,28 +68,35 @@
     --black-sand: #333333;
     --black-screen: #1e1e1e;
 
-    /* Typeface library */
-    .caladea-regular {
-        font-family: "Caladea", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
 
-    .caladea-bold {
-        font-family: "Caladea", serif;
-        font-weight: 700;
-        font-style: normal;
-    }
 
-    .caladea-regular-italic {
-        font-family: "Caladea", serif;
-        font-weight: 400;
-        font-style: italic;
-    }
+    /* FONT BY USE: Shorthand `font` vars */
+    --font-sh-body: normal normal 400 1rem/1.5 var(--font-family-main);
+    --font-sh-title: normal bold 800 2rem/1.5 var(--font-family-main);
+    --font-sh-detail: normal normal 400 0.8rem/1.5 (--font-family-detail);
+    --font-sh-code: normal normal 400 0.9/1.5 (--font-family-code);
 
-    .caladea-bold-italic {
-        font-family: "Caladea", serif;
-        font-weight: 700;
-        font-style: italic;
-    }
+    /* FONT BY ATTRIBUTE: Individual `font`-related vars */
+    --font-family-main: "Caladea", serif;
+    --font-family-detail: "Lexend", sans-serif;
+    --font-family-code: "DM Mono", monospace;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --font-size-main: 1rem;
+    --font-size-title: 3rem;
+    --font-size-subtitle: 2rem;
+
+
+    /* FONT library */
+    /*
+        Caladea is the friendly, general-use serif typeface.
+        Lexend is the modern, detail-specific sans-serif typeface.
+        DM Mono is the code-like monospace typeface.
+
+        For all three, valid font-weight values are from 100 to 900,
+            with regular being 400
+                and bold being 700
+    */
 }

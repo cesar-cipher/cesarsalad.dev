@@ -27,14 +27,16 @@ export interface TechnicalCardEntryProps extends CardEntryProps {
 export function CardEntry({title, subtitle, upperRightCorner, description, descExpansion, callout, footer}: CardEntryProps) {
     return (
         <article className={styles.cardEntry}>
-            {/* Upper left corner details */}
-            <div className={styles.upperLeftCorner}>
-                <h3 className={styles.title}>{title}</h3>
-                {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
-            </div>
+            <div className={styles.header}>
+                {/* Upper left corner details */}
+                <div className={styles.upperLeftCorner}>
+                    <h3 className={styles.title}>{title}</h3>
+                    {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
+                </div>
 
-            {/* Slot for upper right corner details */}
-            {upperRightCorner}
+                {/* Slot for upper right corner details */}
+                {upperRightCorner}
+            </div>
 
             {/* Render the CardEntry.description via pre-typed HTML */}
             <span className={styles.description} dangerouslySetInnerHTML={{ __html: description }}/>
@@ -63,7 +65,7 @@ export function TechnicalCardEntry({duration, location, techStack, ...basicProps
             {...basicProps}
             upperRightCorner={
                 <div className={styles.upperRightCorner}>
-                    {duration && <h5 className={styles.duration}>{duration}</h5>}
+                    {duration && <h4 className={styles.duration}>{duration}</h4>}
                     {location && <h5 className={styles.location}>{location}</h5>}
                 </div>
             }

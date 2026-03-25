@@ -14,10 +14,18 @@ html, body {
 
 body {
     color: black;
-    font: var(--typeface-body);
+    font: var(--font-sh-body);
 }
 
-p { /* Space between adjacent paragraphs */
+.title {
+    font: var(--font-sh-title);
+}
+
+.subtitle {
+    color: var(--color-text-subtitle);
+}
+
+p {
     margin: 0.5em 0;
 }
 

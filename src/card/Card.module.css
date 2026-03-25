@@ -9,7 +9,7 @@ CardDeck: The main body of the page.
     min-width: 60px;
     height: auto;
     margin: 2% auto; /* 2% on top/bottom; centered on left/right */
-    background-color: var(--color-section-shade);
+    background-color: var(--color-deck-bg);
     display: flex; /* Just like before: Each content entry will be its own block */
     flex-direction: column; /* and those blocks will be arranged along the y-axis. */
 }
@@ -30,11 +30,11 @@ CardSection: Each section of data entries, e.g. "Education"
     text-align: center;
 }
 
-.cardSection .title {
+.cardSection > .title {
     color: var(--color-text-title);
 }
 
-.cardSection .subtitle {
+.cardSection > .subtitle {
     color: var(--color-text-subtitle);
 }
 
@@ -57,36 +57,40 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     width: 95%;
     margin: 1% auto; /* No margin on top/bottom; centered left/right */
     padding: 3%;
+
     background-color: var(--color-card-bg);
+    color: var(--color-text-body);
+
+    text-align: left;
+    
     border: 1px solid var(--color-card-border);
     border-radius: 5px;
-    text-align: left;
+}
+
+.cardEntry > .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /* Holds {title} + {subtitle} */
-.cardEntry .upperLeftCorner {
-    
-}
-
-.cardEntry .title {
-    color: var(--color-text-title);
-}
-
-.cardEntry .subtitle {
-    color: var(--color-text-subtitle);
+.header > .upperLeftCorner, .header > .upperRightCorner {
+    display: flex;
+    flex-direction: column;
 }
 
 /*
 .cardEntryUpperRightCorner is an empty slot in base CardEntry.
     This should be described only structurally; let the specific use case determine color, text size, etc.
 */
-.cardEntry .upperRightCorner {
-    
+.header > .upperRightCorner {
+    text-align: right;
 }
 
 /* Separate styling from the expandable part! */
-.cardEntry .description {
-    color: var(--color-text-body);
+.cardEntry > .description {
+    
 }
 
 .cardEntry ul {
@@ -96,11 +100,11 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 
 
 .cardEntry .callout {
-    background-color: var(--color-card-bg-light);
-    border: 1px solid var(--color-card-callout);
-    border-left: 3px solid var(--color-card-callout);
+    background-color: var(--color-card-callout-bg);
+    border: 1px solid var(--color-card-callout-border);
+    border-left: 4px solid var(--color-card-callout-border);
     border-radius: 4px;
-    padding: 16px;
+    padding: 8px 12px;
     font-size: 0.9rem;
     color: var(--color-text-subtitle);
 }
@@ -133,17 +137,18 @@ TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
     Component is TechnicalCardEntry.tsx
     Sub-elements:
         .upperRightCorner -> .cardEntryUpperRightCorner
-            .duration (h5)
+            .duration (h4)
             .location (h5)
         .footer -> .techStack (Component TechStack)
 */
 
 .upperRightCorner > .duration {
-
+    font-style: italic;
 }
 
 .upperRightCorner > .location {
-
+    font-weight: normal;
+    font-style: italic;
 }
 
 /* For TechnicalCardEntry, the footer is a list of the entry's tech stack */
