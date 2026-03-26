@@ -3,6 +3,7 @@ import styles from "./Component.module.css";
 export type TagEntry = {
     icon: string;
     label: string;
+    href?: string;
 }
 
 export interface TagListStyles {
@@ -23,7 +24,10 @@ export function TagList({entries, classNameStyles}: TagListProps) {
             {entries.map(entry => (
                 <li className={`${styles.entry} ${classNameStyles?.entry ?? ''}`}>
                     <span className={`${styles.icon} ${classNameStyles?.icon ?? ''}`}>{entry.icon}</span>
-                    <span className={`${styles.label} ${classNameStyles?.label ?? ''}`}>{entry.label}</span>
+                    {entry.href
+                        ? <a className={`${styles.label} ${classNameStyles?.label ?? ''}`} href={entry.href}>{entry.label}</a>
+                        : <span className={`${styles.label} ${classNameStyles?.label ?? ''}`}>{entry.label}</span>
+                    }
                 </li>
                 )
             )}

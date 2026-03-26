@@ -3,8 +3,8 @@ import cardStyles from "./card/Card.module.css";
 import componentStyles from "./component/Component.module.css";
 
 import CardSection from "./card/CardSection.tsx";
-
 import { sections } from "./data/CardEntryData.tsx";
+import TagList from "./component/TagList.tsx";
 
 
 function App() {
@@ -23,7 +23,19 @@ function App() {
       </main>
 
       <footer className={appStyles.footer}>
-        
+        <TagList
+          entries={[
+            {icon: "📧", label: "Email",    href: "mailto:cesar@cesarsalad.dev"},
+            {icon: "🐱", label: "GitHub",   href: "https://github.com/cesar-cipher"},
+            {icon: "👨‍💻", label: "LinkedIn", href: "https://linkedin.com/cesarsalad"}
+          ]}
+          classNameStyles={{
+            container: appStyles.tagList,
+            entry: appStyles.entry,
+            icon: appStyles.icon,
+            label: appStyles.label
+          }}
+        />
       </footer>
     </div>
   )

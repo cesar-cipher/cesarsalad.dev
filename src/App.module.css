@@ -46,3 +46,29 @@ hr {
     flex-direction: column; /* Main axis is Y-axis */
     /* align-items: stretch; is set by default */
 }
+.App > .footer {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color-black-med);
+}
+
+.App > .footer .tagList {
+    margin: 5% auto;
+
+    font: var(--font-sh-detail);
+    font-size: var(--font-size-body);
+}
+.App > .footer .tagList .entry {
+    background-color: none;
+    border: 1px solid var(--color-white-light);
+    border-radius: 4px;
+    text-decoration: none;
+}
+.App > .footer .tagList .entry .label {
+    color: var(--color-white-med);
+    text-decoration: none;
+}
