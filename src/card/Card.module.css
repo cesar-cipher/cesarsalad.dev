@@ -172,56 +172,22 @@ TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
 .upperRightCorner > .duration {
     font-style: italic;
 }
-
 .upperRightCorner > .location {
     font-weight: normal;
     font-style: italic;
 }
-
-/* For TechnicalCardEntry, the footer is a list of the entry's tech stack */
-.techStack {    /* is an ul */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    margin-top: 16px;
-    padding: 0;
-    list-style-type: none;
-    list-style-position: inside;
-
+/* For TechnicalCardEntry, the footer is a TagList of the entry's tech stack */
+.tagList {
     font: var(--font-sh-code);
 }
-.techStackEntry { /* is a li */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: fit-content;
-    height: 2rem;
-    
-    margin: 2px 16px 2px 0px;
-    padding: 0;
-
+.tagList .entry {
     background-color: var(--color-shadow-light);
     border: 1px dashed var(--color-shadow-dark);
     border-radius: 4px;
 }
-.techStackEntryIcon {
-    height: 2rem;
-    width: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0;
-    padding: 0;
-    
-    font-size: 1.2rem;
-    text-align: center;
-
+.tagList .entry .icon {
     background-color: var(--color-shadow-light);
 }
-.techStackEntryLabel {
-    padding: 0px 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+.tagList .entry .label {
+    color: var(--color-black-lightest);
 }

@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 import DescExpansion from "./DescExpansion.tsx";
-import { TechStack } from "./TechStack.tsx";
+import { TagList } from "../component/TagList.tsx";
 
 // Basic props
 export interface CardEntryProps {
@@ -70,12 +70,81 @@ export function TechnicalCardEntry({duration, location, techStack, ...basicProps
                 </div>
             }
             footer={
-                <TechStack skills={techStack}/>
+                <TagList
+                    entries={validateTechStackTagList(techStack)}
+                    classNameStyles={{
+                        container: styles.tagList,
+                        entry: styles.entry,
+                        icon: styles.icon,
+                        label: styles.label
+                    }}
+                />
             }
         />
     );
 }
 
+function validateTechStackTagList(techStack: string[]) {
+    const TechType: Record<string, {icon: string, label: string}> = {
+        // Back-end
+        JAVA:       {icon: "☕️", label: "Java"},
+        PYTHON:     {icon: "🐍", label: "Python"},
+        SQL:        {icon: "🛢️", label: "SQL"},
+        // Front-end
+        REACT:      {icon: "⚛️", label: "React"},
+        TYPESCRIPT: {icon: "🛂", label: "TypeScript"},
+        HTMLCSS:    {icon: "✴️", label: "HTML/CSS"},
+        KOTLIN:     {icon: "🆔", label: "Kotlin"},
+        SWIFT:      {icon: "🈳", label: "Swift"},
+    }
+
+    // Create a list of ALL the tech types using above TechType Record
+    const techStackEntriesAll = techStack.map(key => {
+        const tech = TechType[key];
+        if (!tech) return null;
+        return { icon: tech.icon, label: tech.label};
+    });
+    // Filter out any null entries (which means I made a typo...)
+    const techStackEntriesFiltered = techStackEntriesAll.filter(entry => entry !== null);
+    // Return the survivors!
+    return techStackEntriesFiltered;
+}
+
 
 
 export default CardEntry;
+
+/*
+// This function is never used; I wrote it here to extract the logic above into a more explicit 
+// write-out so I could understand its logic in TypeScript better.
+
+export type TechType = typeof TechType[keyof typeof TechType];
+
+function TechStackButVerbose({skills}: TechStackProps) {
+    const techStackEntriesAll = skills.map(key => {
+        const tech = TechType[key];
+        // Avoid a breakage if the key at skills[i] doesn't actually map to a TechType
+        if (!tech) return null;
+        // Otherwise, return the appropriate key-value pair associated with the input TechType key
+        return { icon: tech.icon, label: tech.label };
+    });
+
+    // Some of the entries in techStackEntries could be null; get rid of 'em
+    const techStackEntriesFiltered = techStackEntriesAll.filter(item => item !== null);
+    
+    if (techStackEntriesAll.length === 0) return null;
+
+    return (
+        <ul className={styles.techStack}>
+            {techStackEntriesFiltered.map(entry => {
+                return (
+                    <li className={styles.techStackEntry}>
+                        <span className={styles.techStackEntryIcon}>{entry.icon}</span>
+                        <span className={styles.techStackEntryLabel}>{entry.label}</span>
+                    </li>
+                )
+            })}
+        </ul>
+    );
+}
+*/

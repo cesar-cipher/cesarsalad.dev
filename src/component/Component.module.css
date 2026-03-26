@@ -1,0 +1,51 @@
+@import "../vars.css";
+
+/*
+TagList: A Component containing
+    .tagList (ul): Collection of tags
+        .tagEntry (li): The tag itself, wich is a flexbox container for two spans:
+            .icon: The emoji/image representing the tag; anchored to left
+            .label: The actual text for the tag
+*/
+.tagList {    /* is an ul */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+
+    margin-top: 16px;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+.tagList .entry { /* is a li */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    height: 2rem;
+    
+    margin: 2px 2px 2px 0px;
+    padding: 0;
+}
+.tagList .entry + .entry {
+    margin-left: 16px;
+}
+.tagList .entry .icon {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    
+    font-size: 1.2rem;
+    text-align: center;
+}
+.tagList .entry .label {
+    padding: 0px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
