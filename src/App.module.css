@@ -22,7 +22,7 @@ body {
 }
 
 .subtitle {
-    color: var(--color-text-subtitle);
+    font: var(--font-sh-subtitle);
 }
 
 p {

@@ -72,6 +72,8 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    margin-bottom: 2%;
 }
 
 /* Holds {title} + {subtitle} */
@@ -100,36 +102,62 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 
 
 .cardEntry .callout {
+    padding: 10px 14px;
+    margin: 2% 1%;
+
     background-color: var(--color-card-callout-bg);
     border: 1px solid var(--color-card-callout-border);
     border-left: 4px solid var(--color-card-callout-border);
     border-radius: 4px;
-    padding: 8px 12px;
+    
     font-size: 0.9rem;
     color: var(--color-text-subtitle);
 }
 
-/* The descExpansion component has two parts:
-    - the preview bar (which serves as a button),
-    - the actual description that expands/shrinks when the button is clicked.
+/* The DescExpansion component is a container for the following elements:
+    .descExpansionTrigger, the button that toggles isOpen (and thus expands .descExpansion to fit .descExpansionText)
+    .descExpansionPreview, the text inside the collapsed .descExpansion
+    .descExpansionText, the text that expands/shrinks with the isOpen toggle.
 */
 .descExpansion {
+    display: flex;
+    flex-direction: column;
 
+    padding: 8px;
+
+    background-color: var(--color-shadow-light);
+    border-radius: 8px;
 }
-.descExpansion.open {
+.descExpansion .trigger { /* This fills the entire descExpansion and makes it a button for toggling isOpen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    width: 100%;
+    
+    padding: 12px 8px;
+
+    background: none;
+    border: none;
+
+    text-align: left;
 }
-.descExpansionTrigger {
-
+.descExpansion .preview {
+    font: var(--font-sh-detail);
+    font-size: var(--font-size-detail);
 }
-.descExpansionPreview {
+.descExpansion .detail {
+    max-height: 0;
+    padding: 0 16px;
+    overflow: hidden;
 
+    font: var(--font-sh-detail);
+
+    transition: max-height 0.3s ease, border-top 0.3s ease;
 }
-.descExpansionPreview.open {
-
-}
-.descExpansionText {
-
+.descExpansion.open .detail {
+    max-height: 1000px;
+    border-top: 1px solid var(--color-shadow-med);
 }
 
 /*
@@ -141,7 +169,6 @@ TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
             .location (h5)
         .footer -> .techStack (Component TechStack)
 */
-
 .upperRightCorner > .duration {
     font-style: italic;
 }

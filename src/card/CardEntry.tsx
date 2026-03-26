@@ -9,7 +9,7 @@ export interface CardEntryProps {
     upperRightCorner?: React.ReactNode; // Slot for upper right-hand corner details
     description: string;                       // Short blurb about the entry; always visible
     descExpansion?: [string, string];   // Detailed blurb about the entry; button must be clicked to view
-                                        //     key = preview text; value = full detail entry
+                                        //     key = preview text; value = detail text
     callout?: string;                   // Callout for any important info
     footer?: React.ReactNode;           // Slot for elements at the bottom of the entry
 }
@@ -48,7 +48,7 @@ export function CardEntry({title, subtitle, upperRightCorner, description, descE
             {descExpansion &&
                 <DescExpansion
                     previewText={descExpansion[0]}
-                    expansionText={descExpansion[1]}
+                    detailText={descExpansion[1]}
                 />
             }
 

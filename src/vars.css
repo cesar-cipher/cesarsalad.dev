@@ -71,23 +71,24 @@
 
 
     /* FONT BY USE: Shorthand `font` vars */
-    --font-sh-body: normal normal 400 1rem/1.5 var(--font-family-main);
-    --font-sh-title: normal bold 800 2rem/1.5 var(--font-family-main);
-    --font-sh-detail: normal normal 400 0.8rem/1.5 (--font-family-detail);
-    --font-sh-code: normal normal 400 0.9/1.5 (--font-family-code);
+    --font-sh-body:     normal normal 400 var(--font-size-body)/1.5     var(--font-family-body);
+    --font-sh-title:    normal bold   700 var(--font-size-title)/1.5    var(--font-family-body);
+    --font-sh-subtitle: normal bold   600 var(--font-size-subtitle)/1.5 var(--font-family-body);
+    --font-sh-detail:   normal normal 300 var(--font-size-detail)/1.6   var(--font-family-detail);
+    --font-sh-code:     normal normal 400 var(--font-size-detail)/1.5   var(--font-family-code);
 
     /* FONT BY ATTRIBUTE: Individual `font`-related vars */
-    --font-family-main: "Caladea", serif;
-    --font-family-detail: "Lexend", sans-serif;
-    --font-family-code: "DM Mono", monospace;
+    --font-family-body:   "Caladea", serif;
+    --font-family-detail: "Lexend",  sans-serif;
+    --font-family-code:   "DM Mono", monospace;
 
     --font-weight-regular: 400;
-    --font-weight-bold: 700;
+    --font-weight-bold:    700;
 
-    --font-size-main: 1rem;
-    --font-size-title: 3rem;
-    --font-size-subtitle: 2rem;
-
+    --font-size-body:     1rem;
+    --font-size-title:    2rem;
+    --font-size-subtitle: 1.5rem;
+    --font-size-detail:   0.9rem;
 
     /* FONT library */
     /*
