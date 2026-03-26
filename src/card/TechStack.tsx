@@ -68,7 +68,7 @@ function TechStackButVerbose({skills}: TechStackProps) {
         <ul className={styles.techStack}>
             {techStackEntriesFiltered.map(entry => {
                 return (
-                    <li key={entry.label} className={styles.techStackEntry}>
+                    <li className={styles.techStackEntry}>
                         <span className={styles.techStackEntryIcon}>{entry.icon}</span>
                         <span className={styles.techStackEntryLabel}>{entry.label}</span>
                     </li>

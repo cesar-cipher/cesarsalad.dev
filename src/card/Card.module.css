@@ -96,14 +96,13 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
 }
 
 .cardEntry ul {
-    list-style-position: outside; /* This is the default, but making it explicit */
-    padding-left: 1rem; /* I don't want my bullets to sit outside the description box! */
+    list-style-position: inside; /* This is the default, but making it explicit */
 }
 
 
 .cardEntry .callout {
     padding: 10px 14px;
-    margin: 2% 1%;
+    margin: 2% 1% 0 1%;
 
     background-color: var(--color-card-callout-bg);
     border: 1px solid var(--color-card-callout-border);
@@ -123,6 +122,7 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     display: flex;
     flex-direction: column;
 
+    margin: 2% 0 0;
     padding: 8px;
 
     background-color: var(--color-shadow-light);
@@ -179,16 +179,49 @@ TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
 }
 
 /* For TechnicalCardEntry, the footer is a list of the entry's tech stack */
-.techStack {
+.techStack {    /* is an ul */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
+    margin-top: 16px;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+
+    font: var(--font-sh-code);
 }
-/* Actual tech entry in techStack, e.g. TypeScript */
-.techStackEntry {
+.techStackEntry { /* is a li */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    height: 2rem;
+    
+    margin: 2px 16px 2px 0px;
+    padding: 0;
 
+    background-color: var(--color-shadow-light);
+    border: 1px dashed var(--color-shadow-dark);
+    border-radius: 4px;
 }
 .techStackEntryIcon {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    margin: 0;
+    padding: 0;
+    
+    font-size: 1.2rem;
+    text-align: center;
+
+    background-color: var(--color-shadow-light);
 }
 .techStackEntryLabel {
-
+    padding: 0px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
