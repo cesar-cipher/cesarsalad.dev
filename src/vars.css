@@ -27,9 +27,11 @@
     --color-black-dark:             var(--black-screen);
     --color-black-darkest:          var(--paper-ink);
 
+    --color-shadow-light:          rgba(0, 0, 0, 0.025);
     --color-shadow-light:          rgba(0, 0, 0, 0.05);
     --color-shadow-med:            rgba(0, 0, 0, 0.1);
     --color-shadow-dark:           rgba(0, 0, 0, 0.2);
+    --color-shadow-darkest:        rgba(0, 0, 0, 0.4);
 
     /* COLOR library */
     --circus-cream: #f3e5cb;

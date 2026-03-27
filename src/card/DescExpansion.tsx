@@ -15,7 +15,7 @@ const DescExpansion = ({previewText, detailText}: DescExpansionProps) => {
 
             <button className={styles.trigger} onClick={() => setIsOpen(prev => !prev)}>
                 <span className={`${styles.preview} ${isOpen ? styles.open : ""}`}>{previewText}</span>
-                <span className={styles.icon}>{isOpen ? "-" : "+"}</span>
+                <span className={styles.icon}>{isOpen ? "Click to hide -" : "Click to expand +"}</span>
             </button>
 
             <span className={`${styles.detail}`} dangerouslySetInnerHTML={{__html: detailText}}/>

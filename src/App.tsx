@@ -1,6 +1,5 @@
 import appStyles from "./App.module.css";
 import cardStyles from "./card/Card.module.css";
-import componentStyles from "./component/Component.module.css";
 
 import CardSection from "./card/CardSection.tsx";
 import { sections } from "./data/CardEntryData.tsx";

@@ -93,9 +93,10 @@ function validateTechStackTagList(techStack: string[]) {
         // Front-end
         REACT:      {icon: "⚛️", label: "React"},
         TYPESCRIPT: {icon: "🛂", label: "TypeScript"},
-        HTMLCSS:    {icon: "✴️", label: "HTML/CSS"},
-        KOTLIN:     {icon: "🆔", label: "Kotlin"},
+        HTMLCSS:    {icon: "🈸", label: "HTML/CSS"},
+        KOTLIN:     {icon: "✳️", label: "Kotlin"},
         SWIFT:      {icon: "🈳", label: "Swift"},
+        YAML:       {icon: "🆑", label: "YAML"},
     }
 
     // Create a list of ALL the tech types using above TechType Record

@@ -146,6 +146,9 @@ CardEntry: The individual card(s) inside each CardSection, e.g. "Boston Universi
     font: var(--font-sh-detail);
     font-size: var(--font-size-detail);
 }
+.descExpansion .icon {
+    color: var(--color-shadow-dark);
+}
 .descExpansion .detail {
     max-height: 0;
     padding: 0 16px;
@@ -176,7 +179,10 @@ TechnicalCardEntry: A subtype of CardEntry for Employment and Education entries.
     font-weight: normal;
     font-style: italic;
 }
-/* For TechnicalCardEntry, the footer is a TagList of the entry's tech stack */
+/*
+    For TechnicalCardEntry, the footer is a TagList of the entry's tech stack.
+    This CSS is just to customize the appearance - the layout is controlled by TagList.tsx + its corresponding CSS module.
+*/
 .tagList {
     font: var(--font-sh-code);
 }
