@@ -3,6 +3,7 @@
     --color-text-title:             var(--color-black-med);
     --color-text-subtitle:          var(--color-black-light);
     --color-text-body:              var(--color-black-light);
+    --color-text-link:              var(--circus-blue);
 
     --color-page-bg:                var(--circus-cream);
 

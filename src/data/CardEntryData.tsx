@@ -290,47 +290,80 @@ export const sections: CardSectionProps[] = [
             {
                 title: "Nothing Special, Co.",
                 subtitle: "My sewing project! • Launched October 2025",
-                location: "San Francisco",
                 description: `
-                    <p>
-                        After many years of hemming my clothes to fit my 5'4" self, I decided to take 
-                        sewing more seriously as a passion project, rather than a little hobby in my bedroom.
-                    </p>
-                    <p>
-                        The largest part of my "sabbatical" after quitting my job in June of 2025 has been focused on 
-                        creating my own clothing brand by doing industry research and joining a small business mentorship program 
-                        hosted by the SF LGBT Center. I invested in a sewing studio in the SoMa neighborhood, worked with 
-                        a graphic designer to create branding, and have spent countless hours learning pattern drafting and 
-                        garment construction (in addition to a lot of seam ripping).
-                    </p>
-                    <p>
-                        While I haven't launched an online store yet, I continue to design patterns and sew garments like 
-                        summery shirts and shorts sets, plus utility items like sleek bike-frame bags.
-                    </p>
-                    <p>
-                        My projects can be viewed <a href="https://www.instagram.com/nothing.special.co/">on the Instagram page I created for the brand</a>.
-                    </p>
+                <p>
+                    After many years of hemming my clothes to fit my 5'4" self, I decided to take 
+                    sewing more seriously as a passion project, rather than a little hobby in my bedroom.
+                </p>
+                <p>
+                    The largest part of my "sabbatical" after leaving my job in June of 2025 has been focused on 
+                    creating my own clothing brand by doing industry research and joining a small business mentorship program 
+                    hosted by the SF LGBT Center. I invested in a sewing studio in the SoMa neighborhood, worked with 
+                    a graphic designer to create branding, and have spent countless hours learning pattern drafting and 
+                    garment construction (in addition to a lot of seam ripping!).
+                </p>
+                <p>
+                    While I haven't launched an online store yet, I continue to design patterns and sew garments like 
+                    summery shirts and shorts sets, plus utility items like sleek bike-frame bags. I'm hoping to use the insights from the 
+                    small business development program to map a future trajectory.
+                </p>
+                <p>
+                    My projects can be viewed <a href="https://www.instagram.com/nothing.special.co/">on the Instagram page I created for the brand</a>.
+                </p>
                 `
             },
             {
                 title: "Piano and music",
                 subtitle: "Arranging song covers by ear and busking",
-                location: "San Francisco",
                 description: `
-                    <p>
-                        Playing piano has been one of my biggest passions for close to 20 years now. I've loved 
-                        arranging covers to my favorite songs and recording them for YouTube and live busking in 
-                        my neighborhood.
-                    </p>
-                    <p>
-                        The songs for which I've made covers range from Sabrina Carpenter to L'Impératrice to Radiohead, 
-                        and I challenge myself to learn new techniques with each one - especially since I haven't received 
-                        professional lessons since I was about 12 years old!
-                    </p>
-                    <p>
-                        My piano recordings can be viewed <a href="https://www.youtube.com/ishfulthinking">on my YouTube channel here</a>.
-                    </p>
+                <p>
+                    Playing piano has been one of my biggest passions for close to 20 years now. I've loved 
+                    arranging covers to my favorite songs and recording them for YouTube and live busking in 
+                    my neighborhood.
+                </p>
+                <p>
+                    The songs for which I've made covers range from Sabrina Carpenter to L'Impératrice to Radiohead, 
+                    and I challenge myself to learn new techniques with each one - especially since I haven't received 
+                    professional lessons since I was about 12 years old!
+                </p>
+                <p>
+                    My piano recordings can be viewed <a href="https://www.youtube.com/ishfulthinking">on my YouTube channel here</a>.
+                </p>
                 `
+            },
+            {
+                title: "Languages",
+                subtitle: "Spanish, French, and Japanese, oh my",
+                description: `
+                <p>
+                    I've always loved cultural exchange, and so much of that comes in the form of music, literature, and 
+                    art where language is inseparable from the content. I also love traveling to see new sides of the world, and the 
+                    experience is so much richer when you can understand the local language. After all, I can't expect everyone to 
+                    understand English either. With this in mind, it's one of my passions to learn languages:
+                </p>
+                <ul>
+                    <li>
+                        <strong>🇪🇸 Spanish:</strong> Although I'm Hispanic and Latino, my parents emphasized assimilation and didn't 
+                        teach me Spanish. I felt like I had a gap in cultural understanding and took it upon myself to learn 
+                        Spanish both via academic resources and the more "slang" avenues that sounds much more natural. To prove 
+                        my fluency, <strong>I plan to take the DELE C1 exam on May 22nd, 2026</strong>.
+                    </li>
+                    <li>
+                        <strong>🇫🇷 French:</strong> As someone who really enjoys indie pop, indie rock, electronic, and psychedelic rock 
+                        music, I found myself listening to <em>a lot</em> of French artists: L'Impératrice, Angèle, Paradis, Melody's 
+                        Echo Chamber, Yelle, the list goes on! I decided to lean into it and have been learning French since 2020. To 
+                        prove my fluency, <strong>I've even registered for the DELF B2 exam on April 9th, 2026.</strong>
+                    </li>
+                    <li>
+                        <strong>🇯🇵 Japanese:</strong> After years of learning Spanish and French, I wanted to challenge myself to learn 
+                        a language that uses an alphabet/syllabary different from the Roman one to which I'm accustomed. Considering I'm 
+                        a huge nerd for Pokémon and other Nintendo series, I decided learning Japanese would be both challenging and relevant 
+                        to my interests! I'm nowhere near fluency, but I have passed JLPT N5 practice exams. I'm currently focused on
+                        learning the most commonly used kanji so I can read manga like <em>よつばと! (Yotsuba&!)</em>.
+                    </li>
+
+                `
+                
             }
         ]
     }

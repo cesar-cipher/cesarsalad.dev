@@ -29,6 +29,12 @@ p {
     margin: 0.5em 0;
 }
 
+a {
+    color: var(--color-text-link);
+    font-weight: bold;
+    text-decoration: none;
+}
+
 li {
     margin: 0.5em 0;
 }
