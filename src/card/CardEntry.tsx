@@ -113,38 +113,3 @@ function validateTechStackTagList(techStack: string[]) {
 
 
 export default CardEntry;
-
-/*
-// This function is never used; I wrote it here to extract the logic above into a more explicit 
-// write-out so I could understand its logic in TypeScript better.
-
-export type TechType = typeof TechType[keyof typeof TechType];
-
-function TechStackButVerbose({skills}: TechStackProps) {
-    const techStackEntriesAll = skills.map(key => {
-        const tech = TechType[key];
-        // Avoid a breakage if the key at skills[i] doesn't actually map to a TechType
-        if (!tech) return null;
-        // Otherwise, return the appropriate key-value pair associated with the input TechType key
-        return { icon: tech.icon, label: tech.label };
-    });
-
-    // Some of the entries in techStackEntries could be null; get rid of 'em
-    const techStackEntriesFiltered = techStackEntriesAll.filter(item => item !== null);
-    
-    if (techStackEntriesAll.length === 0) return null;
-
-    return (
-        <ul className={styles.techStack}>
-            {techStackEntriesFiltered.map(entry => {
-                return (
-                    <li className={styles.techStackEntry}>
-                        <span className={styles.techStackEntryIcon}>{entry.icon}</span>
-                        <span className={styles.techStackEntryLabel}>{entry.label}</span>
-                    </li>
-                )
-            })}
-        </ul>
-    );
-}
-*/

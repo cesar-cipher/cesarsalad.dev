@@ -49,3 +49,7 @@ TagList: A Component containing
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
+.tagList .entry .icon img {
+    height: 1.2em;
+    width: 1.2em;
+}

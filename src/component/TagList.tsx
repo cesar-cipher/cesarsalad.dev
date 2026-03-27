@@ -1,3 +1,6 @@
+import twemoji from 'twemoji';
+import { useRef, useEffect } from 'react';
+
 import styles from "./Component.module.css";
 
 export type TagEntry = {
@@ -19,11 +22,25 @@ export interface TagListProps {
 }
 
 export function TagList({entries, classNameStyles}: TagListProps) {
+    // Hold the DOM reference to the emoji icon
+    const iconRefs = useRef<(HTMLSpanElement | null)[]>([]);
+    // And call useEffect() call Twemoji.parse() on each emoji icon after rendering
+    useEffect(() => {
+        iconRefs.current.forEach(span => {
+            if (span) { // not null
+                twemoji.parse(span, { className: 'twemoji'});
+            }
+        });
+    }, [entries]);
+
     return (
         <ul className={`${styles.tagList} ${classNameStyles?.container ?? ''} `}>
-            {entries.map(entry => (
+            {entries.map((entry, index) => (
                 <li className={`${styles.entry} ${classNameStyles?.entry ?? ''}`}>
-                    <span className={`${styles.icon} ${classNameStyles?.icon ?? ''}`}>{entry.icon}</span>
+                    <span
+                        ref={elem => { iconRefs.current[index] = elem; }}
+                        className={`${styles.icon} ${classNameStyles?.icon ?? ''}`}>{entry.icon}
+                    </span>
                     {entry.href
                         ? <a className={`${styles.label} ${classNameStyles?.label ?? ''}`} href={entry.href}>{entry.label}</a>
                         : <span className={`${styles.label} ${classNameStyles?.label ?? ''}`}>{entry.label}</span>
