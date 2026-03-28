@@ -26,7 +26,7 @@ function App() {
           entries={[
             {icon: "📧", label: "Email",    href: "mailto:cesar@cesarsalad.dev"},
             {icon: "🐱", label: "GitHub",   href: "https://github.com/cesar-cipher"},
-            {icon: "👨‍💻", label: "LinkedIn", href: "https://linkedin.com/cesarsalad"}
+            {icon: "👨‍💻", label: "LinkedIn", href: "https://linkedin.com/in/cesarsalad"}
           ]}
           classNameStyles={{
             container: appStyles.tagList,
