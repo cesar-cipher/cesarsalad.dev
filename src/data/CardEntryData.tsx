@@ -351,8 +351,10 @@ export const sections: CardSectionProps[] = [
                     <li>
                         <strong>🇫🇷 French:</strong> As someone who really enjoys indie pop, indie rock, electronic, and psychedelic rock 
                         music, I found myself listening to <em>a lot</em> of French artists: L'Impératrice, Angèle, Paradis, Melody's 
-                        Echo Chamber, Yelle, the list goes on! I decided to lean into it and have been learning French since 2020. To 
-                        prove my fluency, <strong>I've even registered for the DELF B2 exam on April 9th, 2026.</strong>
+                        Echo Chamber, Yelle, the list goes on! I decided to lean into it and have been learning French since 2020.</p>
+                         
+                        <p>To prove my fluency, <strong>I took the DELF B2 exam on April 9th, 2026 and passed!</strong> I'm certified 
+                        fluent at a B2 level by France's Ministry of Education.
                     </li>
                     <li>
                         <strong>🇯🇵 Japanese:</strong> After years of learning Spanish and French, I wanted to challenge myself to learn 
